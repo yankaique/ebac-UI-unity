@@ -17,6 +17,11 @@ namespace Screens
             ShowByType(startScreen);
         }
 
+        private void GetRandom()
+        {
+            screenBase[Random.Range(0, screenBase.Count)].animationDuration = 1;
+        }
+
         public void ShowByType(ScreenType type)
         {
             if (_currentScreen != null) _currentScreen.Hide();
