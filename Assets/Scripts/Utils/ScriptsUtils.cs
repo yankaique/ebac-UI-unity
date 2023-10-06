@@ -6,13 +6,9 @@ using UnityEngine;
 public static class ScriptsUtils
 {
     // extensions
-    public static T GetRandom<T>(this T[] array)
+    public static T GetRandom<T>(this List<T> array)
     {
-        if(array.Length == 0)
-        {
-            return default(T);
-        }
 
-        return array[Random.Range(0, array.Length)];
+        return array[Random.Range(0, array.Count)];
     }
 }
